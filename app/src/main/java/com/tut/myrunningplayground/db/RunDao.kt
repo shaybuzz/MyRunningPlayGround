@@ -1,10 +1,7 @@
 package com.tut.myrunningplayground.db
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.tut.myrunningplayground.db.entity.Run
 
 @Dao
@@ -34,7 +31,7 @@ interface RunDao {
     @Query("SELECT SUM(distanceInMeters) FROM running_table")
     fun getTotalDistance(): LiveData<Int>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(run: Run)
 
     @Delete

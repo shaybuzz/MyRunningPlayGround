@@ -11,7 +11,8 @@ class Converters {
     companion object {
         @JvmStatic
         @TypeConverter
-        fun fromInstant(bitmap: Bitmap): String {
+        fun fromInstant(bitmap: Bitmap?): String {
+            if (bitmap == null) return ""
             val byteArrayOutputStream = ByteArrayOutputStream()
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
             val byteArray: ByteArray = byteArrayOutputStream.toByteArray()
@@ -20,7 +21,8 @@ class Converters {
 
         @JvmStatic
         @TypeConverter
-        fun fromInstant(strBase64: String): Bitmap {
+        fun fromInstant(strBase64: String): Bitmap? {
+            if (strBase64.isNullOrEmpty()) return null
             val byteArray = Base64.decode(strBase64, Base64.DEFAULT)
             return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
         }
