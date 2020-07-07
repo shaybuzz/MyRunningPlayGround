@@ -6,5 +6,33 @@
     <fragment
         android:id="@+id/setupFragment"
         android:name="com.tut.myrunningplayground.view.SetupFragment"
-        android:label="SetupFragment" />
+        android:label="SetupFragment" >
+        <action
+            android:id="@+id/action_setupFragment_to_runsFragment"
+            app:destination="@id/runsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/runsFragment"
+        android:name="com.tut.myrunningplayground.view.RunsFragment"
+        android:label="RunsFragment" >
+        <action
+            android:id="@+id/action_runsFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.tut.myrunningplayground.view.StatisticsFragment"
+        android:label="StatisticsFragment" />
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.tut.myrunningplayground.view.TrackingFragment"
+        android:label="TrackingFragment" >
+        <action
+            android:id="@+id/action_trackingFragment_to_runsFragment"
+            app:destination="@id/runsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.tut.myrunningplayground.view.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
