@@ -12,6 +12,7 @@ import com.tut.myrunningplayground.utils.Consts
 import com.tut.myrunningplayground.utils.TrackingUtility
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_run.*
+import kotlinx.android.synthetic.main.fragment_tracking.*
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
@@ -22,6 +23,7 @@ class RunsFragment : Fragment(R.layout.fragment_run), EasyPermissions.Permission
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requestPermissions()
+
         fab.setOnClickListener {
             findNavController().navigate(R.id.action_runsFragment_to_trackingFragment)
         }

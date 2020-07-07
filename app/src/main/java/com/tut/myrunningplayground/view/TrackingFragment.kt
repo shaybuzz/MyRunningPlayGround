@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.gms.maps.GoogleMap
 import com.tut.myrunningplayground.R
+import com.tut.myrunningplayground.service.TrackingService
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_tracking.*
 
@@ -21,6 +22,9 @@ class TrackingFragment:Fragment(R.layout.fragment_tracking) {
             map = it
         })
         mapView.onCreate(savedInstanceState)
+        btnToggleRun.setOnClickListener {
+            TrackingService.startResumeService(requireContext())
+        }
     }
 
     override fun onStart() {
