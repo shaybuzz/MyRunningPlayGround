@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">MyRunningPlayGround</string>
-    <string name="google_api_key">AIzaSyCE2VV-Gj0H6fxqICbW_GAodV-80cmcW90</string>
+    <string-array name="filter_options">
+        <item>Date</item>
+        <item>Running Time</item>
+        <item>Distance</item>
+        <item>Average Speed</item>
+        <item>Calories Burned</item>
+    </string-array>
+
+<!-- original
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDXmRQy16dinzSskRv7qKH0hTde-QVqYTU</string>-->
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCE2VV-Gj0H6fxqICbW_GAodV-80cmcW90</string>
+
+    <!--    <string name="google_api_key">AIzaSyCE2VV-Gj0H6fxqICbW_GAodV-80cmcW90</string>-->
 </resources>
