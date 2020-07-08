@@ -12,6 +12,11 @@
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDXmRQy16dinzSskRv7qKH0hTde-QVqYTU</string>-->
 
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCE2VV-Gj0H6fxqICbW_GAodV-80cmcW90</string>
+    <string name="channel_name">runing</string>
+    <string name="channel_description">running tracking your run</string>
+    <string name="ticker_text">run</string>
+    <string name="notification_title">running app</string>
+    <string name="notification_message">running tracking</string>
 
     <!--    <string name="google_api_key">AIzaSyCE2VV-Gj0H6fxqICbW_GAodV-80cmcW90</string>-->
 </resources>
